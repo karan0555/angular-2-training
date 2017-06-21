@@ -1,0 +1,41 @@
+<div width="500" height="600" bgcolor="blue">
+	<h1>Demonstartion of {{demoTitle}}</h1>
+	<hr>
+	<h3>Enter the search keyword :- </h3>
+	<input type="text" [(ngModel)]="searchKey" />
+	<h2>Employees Info is : - </h2>
+	
+	<table border="1" bgcolor="cyan">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Location</th>
+				<th>ID</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor = "let emp of employees | employeeFilter : searchKey">
+				<td>{{emp.name | uppercase }}</td>
+				<td>{{emp.location | uppercase }}</td>
+				<td>{{emp.id}}</td>
+			</tr>
+		</tbody>
+	</table>
+	
+	<hr>
+	
+	<h2>numbers selected Info is : - </h2>
+	
+	<table>
+		<thead>
+			<tr>
+				<th>Number</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor = "let num of numbers | oddFilter">
+				<td>{{num}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

@@ -1,0 +1,24 @@
+<div width="500" height="600" bgcolor="blue">
+	<h1>Demonstartion of {{demoTitle}}</h1>
+	<hr>
+	<h3>Todays date is : {{todayDate | date:"dd-MMM-yyyy"}} </h3>
+	<hr>
+	<h2>Employees Info is : - </h2>
+	
+	<table border="1" bgcolor="cyan">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Location</th>
+				<th>ID</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor = "let emp of employees">
+				<td>{{emp.name | uppercase }}</td>
+				<td>{{emp.location | uppercase }}</td>
+				<td>{{emp.id}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

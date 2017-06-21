@@ -1,0 +1,17 @@
+<div>
+	<h1>Demonstartion of {{demoTitle}}</h1>
+	<hr>
+	<h5>Value of data {{counter}}</h5>
+	
+	<label> Enter your name </label>
+	<input type="text" [(ngModel)] = "data" />
+	<br/>
+	<h3>Name is {{data}}</h3>
+	<hr>
+	
+	<label> Enter another data </label>
+	<input type="text" [ngModel]="inputData" (ngModelChange) = "setInputData($event)" />
+	
+	<br/>
+	<h6>Input data is {{inputData}}</h6>
+</div>

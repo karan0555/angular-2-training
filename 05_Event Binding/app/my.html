@@ -1,0 +1,10 @@
+<div>
+	<h1>Demonstartion of {{demoTitle}}</h1>
+	<hr>
+	<h5>Value of Counter {{counter}}</h5>
+	<h4>Input Data {{inputData}} </h4>
+	
+	<button (click) = 'incrementCounter()'>Click here</button>
+	
+	<input [value]='inputData' (input)='setInputData($event.target.value)'/>
+</div>
